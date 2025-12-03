@@ -1,20 +1,33 @@
 ﻿<Properties StartupConfiguration="{76579FBC-F46C-4A64-B406-2467CF6670E7}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.finance__tracker PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Menu.cs">
+    <Files>
+      <File FileName="Program.cs" Line="23" Column="52" />
+      <File FileName="Services/DatabseService.cs" Line="106" Column="1" />
+      <File FileName="Models/User.cs" Line="14" Column="1" />
+      <File FileName="Services/financeServices.cs" Line="3" Column="11" />
+      <File FileName="Models/Transaction.cs" Line="6" Column="44" />
+      <File FileName="Services/logicServices.cs" Line="3" Column="1" />
+      <File FileName="Services/Menu.cs" Line="24" Column="62" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="finance_tracker">
-            <Node name="finance_tracker" selected="True" />
+            <Node name="finance_tracker" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="Menu.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>
