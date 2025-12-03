@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "0XaxQvT3vjY=",
+  "success": true,
+  "projectFilePath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj",
+  "expectedPackageFiles": [
+    "/Users/oghoghosaohonba/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.bcl.asyncinterfaces/9.0.1/microsoft.bcl.asyncinterfaces.9.0.1.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.data.sqlite/10.0.0/microsoft.data.sqlite.10.0.0.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.data.sqlite.core/10.0.0/microsoft.data.sqlite.core.10.0.0.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.11/sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/sqlitepclraw.core/2.1.11/sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.11/sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.11/sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/system.reflection.emit.lightweight/4.7.0/system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.36/microsoft.netcore.app.host.osx-x64.6.0.36.nupkg.sha512",
+    "/Users/oghoghosaohonba/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
