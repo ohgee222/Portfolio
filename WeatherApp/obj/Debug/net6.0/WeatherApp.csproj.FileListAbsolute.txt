@@ -1,0 +1,17 @@
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/WeatherApp
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/WeatherApp.deps.json
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/WeatherApp.runtimeconfig.json
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/WeatherApp.dll
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/WeatherApp.pdb
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.csproj.AssemblyReference.cache
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.AssemblyInfoInputs.cache
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.AssemblyInfo.cs
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.csproj.CoreCompileInputs.cache
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.csproj.CopyComplete
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.dll
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/refint/WeatherApp.dll
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.pdb
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/WeatherApp.genruntimeconfig.cache
+/Users/oghoghosaohonba/Desktop/Portfolio/WeatherApp/obj/Debug/net6.0/ref/WeatherApp.dll
