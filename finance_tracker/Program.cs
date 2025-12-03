@@ -1,113 +1,112 @@
 ﻿using FinanceTracker.Services;
 using finance_tracker.Models;
-using Microsoft.Data.Sqlite;
-
 
 var db = new DatabaseService();
-var finance = new FinanceService(db);
+var menu = new Menu();
 
 while (true)
 {
-    Console.WriteLine("\n==== PERSONAL FINANCE TRACKER ====");
-    Console.WriteLine("1. Add Income");
-    Console.WriteLine("2. Add Expense");
-    Console.WriteLine("3. View All Transactions");
-    Console.WriteLine("4. View Monthly Summary");
-    Console.WriteLine("5. Exit");
-    Console.Write("Choose an option: ");
+    Console.Clear();
+    Console.WriteLine("==== FINANCE TRACKER ====");
+    Console.WriteLine("1. Login");
+    Console.WriteLine("2. Register");
+    Console.WriteLine("3. Exit");
+    Console.Write("Choose option: ");
+    var option = Console.ReadLine();
 
-    string? choice = Console.ReadLine();
-
-    switch (choice)
+    switch (option)
     {
         case "1":
-            AddIncome(finance);
+            var user = Login(db);
+            if (user != null)
+            {
+                Console.WriteLine($"\nWelcome {user.FullName}!");
+                menu.Start(user.Id);   // ← This enters YOUR menu class
+            }
+            else
+            {
+                Console.WriteLine("Invalid username or password.");
+                Console.ReadKey();
+            }
             break;
 
         case "2":
-            AddExpense(finance);
+            Register(db);
             break;
 
         case "3":
-            ViewTransactions(finance);
-            break;
-
-        case "4":
-            MonthlySummary(finance);
-            break;
-
-        case "5":
-            Console.WriteLine("Exiting...");
+            Console.WriteLine("Goodbye!");
             return;
 
         default:
-            Console.WriteLine("Invalid option, try again.");
+            Console.WriteLine("Invalid option.");
+            Console.ReadKey();
             break;
     }
 }
 
-void AddIncome(FinanceService finance)
+User? Login(DatabaseService db)
 {
-    Console.Write("Enter amount: ");
-    decimal amount = decimal.Parse(Console.ReadLine()!);
+    Console.Clear();
+    Console.WriteLine("==== LOGIN ====");
+    Console.Write("Username: ");
+    string username = Console.ReadLine()!;
 
-    Console.Write("Enter description: ");
-    string? description = Console.ReadLine();
+    Console.Write("Password: ");
+    string password = ReadPassword();
 
-    finance.AddIncome(amount, description ?? "Income");
-
-    Console.WriteLine("Income added!");
+    return db.LoginUser(username, password);
 }
 
-void AddExpense(FinanceService finance)
+void Register(DatabaseService db)
 {
-    Console.Write("Enter amount: ");
-    decimal amount = decimal.Parse(Console.ReadLine()!);
+    Console.Clear();
+    Console.WriteLine("==== REGISTER ====");
 
-    Console.Write("Enter category (Food, Rent, Travel, Other): ");
-    string? category = Console.ReadLine();
+    Console.Write("Full Name: ");
+    string fullName = Console.ReadLine()!;
 
-    Console.Write("Enter description: ");
-    string? description = Console.ReadLine();
+    Console.Write("Email: ");
+    string email = Console.ReadLine()!;
 
-    finance.AddExpense(amount, category ?? "Other", description ?? "Expense");
+    Console.Write("Username: ");
+    string username = Console.ReadLine()!;
 
-    Console.WriteLine("Expense added!");
-}
+    Console.Write("Password: ");
+    string password = ReadPassword();
 
-void ViewTransactions(FinanceService finance)
-{
-    var transactions = finance.GetTransactions();
-
-    if (transactions.Count == 0)
+    try
     {
-        Console.WriteLine("No transactions found.");
-        return;
+        db.RegisterUser(fullName, email, username, password);
+        Console.WriteLine("\nRegistration successful!");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"\nRegistration failed: {ex.Message}");
     }
 
-    Console.WriteLine("\n--- ALL TRANSACTIONS ---");
-    foreach (var t in transactions)
-    {
-        Console.WriteLine($"{t.Date:yyyy-MM-dd} | {t.Type} | £{t.Amount} | {t.Category} | {t.Description}");
-    }
+    Console.ReadKey();
 }
 
-void MonthlySummary(FinanceService finance)
+string ReadPassword()
 {
-    Console.Write("Enter year (e.g., 2025): ");
-    int year = int.Parse(Console.ReadLine()!);
+    string pass = "";
+    ConsoleKey key;
 
-    Console.Write("Enter month (1-12): ");
-    int month = int.Parse(Console.ReadLine()!);
+    while ((key = Console.ReadKey(true).Key) != ConsoleKey.Enter)
+    {
+        if (key == ConsoleKey.Backspace && pass.Length > 0)
+        {
+            pass = pass[..^1];
+            Console.Write("\b \b");
+        }
+        else if (!char.IsControl((char)key))
+        {
+            pass += (char)key;
+            Console.Write("*");
+        }
+    }
 
-    var summary = finance.GetMonthlySummary(year, month);
-
-    Console.WriteLine("\n--- MONTHLY SUMMARY ---");
-    Console.WriteLine($"Total Income  : £{summary.income}");
-    Console.WriteLine($"Total Expense : £{summary.expense}");
-    Console.WriteLine($"Savings       : £{summary.savings}");
-
-    Console.WriteLine("\nExpense by Category:");
-    foreach (var cat in summary.categoryTotals)
-        Console.WriteLine($"{cat.Key}: £{cat.Value}");
+    Console.WriteLine();
+    return pass;
 }

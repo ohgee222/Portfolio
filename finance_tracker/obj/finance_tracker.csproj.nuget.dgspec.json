@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/finance_tracker.csproj": {}
+    "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj": {}
   },
   "projects": {
-    "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/finance_tracker.csproj": {
+    "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/finance_tracker.csproj",
+        "projectUniqueName": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj",
         "projectName": "finance_tracker",
-        "projectPath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/finance_tracker.csproj",
+        "projectPath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj",
         "packagesPath": "/Users/oghoghosaohonba/.nuget/packages/",
-        "outputPath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/obj/",
+        "outputPath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/oghoghosaohonba/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.66, )"

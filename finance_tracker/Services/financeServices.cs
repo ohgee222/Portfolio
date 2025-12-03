@@ -5,16 +5,19 @@ namespace FinanceTracker.Services
     public class FinanceService
     {
         private readonly DatabaseService _db;
+        private readonly int _userId;
 
-        public FinanceService(DatabaseService db)
+        public FinanceService(DatabaseService db, int userId)
         {
             _db = db;
+            _userId = userId;
         }
 
         public void AddIncome(decimal amount, string description)
         {
             var t = new Transaction
             {
+                UserId = _userId,
                 Amount = amount,
                 Type = "Income",
                 Category = null,
@@ -29,6 +32,7 @@ namespace FinanceTracker.Services
         {
             var t = new Transaction
             {
+                UserId = _userId,
                 Amount = amount,
                 Type = "Expense",
                 Category = category,
@@ -41,21 +45,16 @@ namespace FinanceTracker.Services
 
         public List<Transaction> GetTransactions()
         {
-            return _db.GetAll();
+            return _db.GetTransactionsByUser(_userId);
         }
 
         public (decimal income, decimal expense, decimal savings, Dictionary<string, decimal> categoryTotals)
-            GetMonthlySummary(int year, int month)
+        GetMonthlySummary(int year, int month)
         {
-            var monthly = _db.GetByMonth(year, month);
+            var monthly = _db.GetTransactionsByUserAndMonth(_userId, year, month);
 
-            decimal income = monthly
-                .Where(t => t.Type == "Income")
-                .Sum(t => t.Amount);
-
-            decimal expense = monthly
-                .Where(t => t.Type == "Expense")
-                .Sum(t => t.Amount);
+            decimal income = monthly.Where(t => t.Type == "Income").Sum(t => t.Amount);
+            decimal expense = monthly.Where(t => t.Type == "Expense").Sum(t => t.Amount);
 
             var categoryTotals = monthly
                 .Where(t => t.Type == "Expense")
@@ -66,3 +65,4 @@ namespace FinanceTracker.Services
         }
     }
 }
+

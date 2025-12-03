@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OkgE4uC9fy8=",
+  "dgSpecHash": "0XaxQvT3vjY=",
   "success": true,
-  "projectFilePath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker/finance_tracker.csproj",
+  "projectFilePath": "/Users/oghoghosaohonba/Desktop/Portfolio/finance_tracker/finance_tracker.csproj",
   "expectedPackageFiles": [
+    "/Users/oghoghosaohonba/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/oghoghosaohonba/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
     "/Users/oghoghosaohonba/.nuget/packages/microsoft.bcl.asyncinterfaces/9.0.1/microsoft.bcl.asyncinterfaces.9.0.1.nupkg.sha512",
     "/Users/oghoghosaohonba/.nuget/packages/microsoft.data.sqlite/10.0.0/microsoft.data.sqlite.10.0.0.nupkg.sha512",
